@@ -1,0 +1,79 @@
+<mat-card *ngFor="let detail of details">
+    <mat-card class="outline">
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar-image" [ngStyle]="{'background-image': 'url({detail.logo})'}"></div> -->
+            <img mat-card-avatar class="avatar-image" src="{{detail.logo}}" />
+            <mat-card-title>{{detail.company_name}}</mat-card-title>
+            <mat-card-subtitle>{{detail.title_}}</mat-card-subtitle>
+            <!-- <a href="https://www.google.com/" target="_blank">Link</a> -->
+            <!-- <i class="fa fa-twitter" aria-hidden="true"> <a href="{{detail.twitterUrl}}"></a></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i> -->
+        </mat-card-header>
+        <mat-card-content>
+            <mat-divider></mat-divider>
+            <h4>{{detail.Short_description}}</h4>
+            <mat-divider></mat-divider>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3 class="pt-2">Specialities</h3>
+                    <div class="buton-specs">
+                        <button mat-stroked-button color="primary" *ngFor="let item of detail.specialties">{{item}}</button>
+                    </div>
+                </div>
+                <div class="col-sm-4 pt-2">
+                    <img src="{{detail.screenshot}}" alt="Girl in a jacket" width="80%" height="90%">
+                </div>
+            </div>
+
+            <mat-divider style="margin-top: 4px;"></mat-divider>
+            <h3 class="pt-2">Details</h3>
+            <table style="width:100%">
+                <tr>
+                    <!-- <th>Company</th> -->
+                    <!-- <th>Contact</th> -->
+
+                </tr>
+                <tr>
+                    <td><b>Type</b></td>
+                    <td>{{detail.type}}</td>
+
+                </tr>
+                <tr>
+                    <td><b>Founded In</b></td>
+                    <td>{{detail.founded}}</td>
+
+                </tr>
+                <tr>
+                    <td><b>Rating</b></td>
+                    <td>{{detail.rating}}</td>
+
+                </tr>
+                <tr>
+                    <td><b>Company Size</b></td>
+                    <td>{{detail.companySize}}</td>
+
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td>{{detail.email}}</td>
+
+                </tr>
+                <tr>
+                    <td><b>Address</b></td>
+                    <td>{{detail.companyAddress}}</td>
+
+                </tr>
+                <tr>
+                    <td><b>Analysis</b></td>
+                    <td>{{detail.Analysis}}</td>
+
+                </tr>
+            </table>
+
+        </mat-card-content>
+        <!-- <mat-card-actions>
+            <button mat-raised-button color="primary">Learn More</button>
+        </mat-card-actions> -->
+    </mat-card>
+</mat-card>
